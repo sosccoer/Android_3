@@ -22,4 +22,7 @@
     <string name="Scaffold">Scaffold</string>
     <string name="menu">Меню</string>
     <string name="myComposeApp">MyComposeApp</string>
+    <string name="Grid">Grid </string>
+    <string name="Scrolling">Scrolling </string>
+
 </resources>
