@@ -47,7 +47,7 @@ private val items = listOf(
         )
     ),
     BookCategory(
-        R.string.swift,
+        R.string.ios,
         listOf(
             R.drawable.core_data,
             R.drawable.ios_apprentice
@@ -55,13 +55,48 @@ private val items = listOf(
     )
 
 )
+
+@Composable
+fun ListScreen() {
+    MyList()
+    BackButtonHandler {
+        FundamentalsRouter.navigateTo(Screen.Navigation)
+    }
+}
 @Composable
 fun MyList() {
-
+    LazyColumn{
+        items (items) { item -> ListItem(item)}
+    }
 }
 @Composable
 fun ListItem(bookCategory: BookCategory,modifier: Modifier = Modifier){
+Column (modifier = Modifier.padding(8.dp)) {
+    Text(
+        text = stringResource(id = bookCategory.categoryResourceId),
+        fontSize = 22.sp,
+        fontWeight = FontWeight.Bold,
+        color = colorResource(id = R.color.colorPrimary)
+    )
+    Spacer(modifier = modifier.height(8.dp))
 
+    LazyRow{
+        items(bookCategory.bookImageResources){items ->
+            BookImage(items)
+        }
+    }
+    }
+
+}
+
+@Composable
+fun BookImage(imageResource: Int){
+    Image(
+        modifier = Modifier.size(170.dp,200.dp),
+        painter = painterResource(id = imageResource),
+        contentScale = ContentScale.Fit,
+        contentDescription = stringResource(id = R.string.aboutBooks)
+    )
 }
 
 data class BookCategory (

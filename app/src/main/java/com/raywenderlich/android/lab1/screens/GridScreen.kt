@@ -27,19 +27,5 @@ private val items = listOf(
     Icons.Filled.ThumbUp,
 
     )
-@Composable
-    fun ListScreen() {
-        MyList()
-        BackButtonHandler {
-            FundamentalsRouter.navigateTo(Screen.Navigation)
-        }
-    }
-@Composable
-    fun myList() {
 
-    }
 
-@Composable
-fun listItem(bookCategory: BookCategory,modifier: Modifier = Modifier){
-
-}
