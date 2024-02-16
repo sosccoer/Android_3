@@ -33,9 +33,6 @@
     <string name="swift">swift</string>
     <string name="ios">ios</string>
     <string name="aboutBooks">Обложки книг</string>
-
-
-
-
+    <string name="grid_icon">Grid icon</string>
 
 </resources>

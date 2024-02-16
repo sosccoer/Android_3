@@ -41,6 +41,7 @@ fun NavigationScreen() {
             NavigationButton(stringResource(id = R.string.Scaffold),Screen.Scaffold)
             NavigationButton(stringResource(id = R.string.Scrolling),Screen.Scrolling)
             NavigationButton(stringResource(id = R.string.list),Screen.List )
+            NavigationButton(stringResource(id = R.string.Grid),Screen.Grid)
         }
     }
 }
@@ -50,7 +51,7 @@ fun NavigationButton(text: String, screen: Screen) {
     Button(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 16.dp, end = 16.dp, top = 16.dp),
+            .padding(start = 16.dp, end = 16.dp, top = 8.dp),
         shape = RoundedCornerShape(4.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.blue)),
         onClick = { FundamentalsRouter.navigateTo(screen) }
